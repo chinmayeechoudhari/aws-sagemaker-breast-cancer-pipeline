@@ -17,14 +17,13 @@ from sklearn.model_selection import train_test_split
 # ==============================================================================
 # 1. Configuration & Session Setup
 # ==============================================================================
-# Replace with your roll number and AWS account ID
-ROLL_NO = "YOUR_ROLLNO" 
+ROLL_NO = "55" 
 BUCKET_NAME = f"ty-aids-sagemaker-{ROLL_NO}"
 PREFIX = "breast-cancer"
-REGION = "ap-south-1" # e.g. ap-south-1 (Mumbai), us-east-1, etc.
+REGION = "ap-south-1"
 
 # SageMaker execution role ARN (created in IAM console)
-ROLE_ARN = "arn:aws:iam::<YOUR_ACCOUNT_ID>:role/SageMakerAssignmentRole"
+ROLE_ARN = "arn:aws:iam::043262084819:role/SageMakerAssignmentRole"
 
 session = sagemaker.Session()
 
