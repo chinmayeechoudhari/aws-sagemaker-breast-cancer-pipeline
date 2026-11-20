@@ -1,0 +1,50 @@
+[
+  {
+    "config": {
+      "name": "Setting 1 (Default)",
+      "n_estimators": 200,
+      "max_depth": 8
+    },
+    "metrics": {
+      "accuracy": 0.956140350877193,
+      "precision": 0.958904109589041,
+      "recall": 0.9722222222222222,
+      "f1": 0.9655172413793104,
+      "auc": 0.9940476190476191
+    },
+    "confusion_matrix": [
+      [
+        39,
+        3
+      ],
+      [
+        2,
+        70
+      ]
+    ]
+  },
+  {
+    "config": {
+      "name": "Setting 2 (Alternative)",
+      "n_estimators": 100,
+      "max_depth": 4
+    },
+    "metrics": {
+      "accuracy": 0.956140350877193,
+      "precision": 0.958904109589041,
+      "recall": 0.9722222222222222,
+      "f1": 0.9655172413793104,
+      "auc": 0.9950396825396826
+    },
+    "confusion_matrix": [
+      [
+        39,
+        3
+      ],
+      [
+        2,
+        70
+      ]
+    ]
+  }
+]
