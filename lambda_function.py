@@ -38,15 +38,12 @@ def lambda_handler(event, context):
                 "body": json.dumps({"error": f"Expected 30 features, but received {len(features)}"})
             }
 
-        # Convert feature array into CSV string row as expected by scikit-learn container
-        csv_payload = ",".join(str(float(x)) for x in features)
-
-        # Invoke SageMaker real-time endpoint
+        # Send 2D JSON array [[x1, x2, ..., x30]] as expected by container
         response = runtime.invoke_endpoint(
             EndpointName=ENDPOINT,
-            ContentType="text/csv",
+            ContentType="application/json",
             Accept="application/json",
-            Body=csv_payload
+            Body=json.dumps([features])
         )
 
         # Parse response body from SageMaker
